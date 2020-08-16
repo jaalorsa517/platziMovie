@@ -1,1 +1,14 @@
 /*Screen between 1024 x 768*/
+
+@media screen and (max-width:1024px) {
+    header .title-container {
+        margin-right: 0em;
+    }
+    header .form{
+        margin-left:10px;
+    }
+    header .account{
+        margin-left: 0em;
+        padding-left:0em;
+    }
+}

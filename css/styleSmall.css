@@ -1,1 +1,32 @@
-/*Screen between 360 x 640 */
+/*Screen  800px  */
+@media screen and (max-width:800px){
+    header .title-container{
+        padding-left: 0px;
+        margin-left:0px;
+        flex:3;
+    }
+    header .account{
+        padding-right: 0;
+        margin-right: 0;
+    }
+    header .form{
+        width: max-content;
+        flex:1;
+    }
+    header .form form{
+        display:none;
+    }
+    header .form figure{
+        display: inline-flex;
+        width:  50px;
+        height: 50px;
+        background-size: 50px 50px;
+        background-image: url("../img/find.svg");
+        background-repeat: no-repeat;
+    }
+}
+@media screen and (max-width:650px){
+    header .account{
+        display:none;
+    }
+}

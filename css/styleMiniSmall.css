@@ -1,1 +1,31 @@
-/*Screen between 320 x 480*/
+/*Screen between 320px*/
+
+@media screen and (min-width:320px) and (max-width:650px){
+    header {
+        padding-right: 0em;
+        padding-left: 0em;
+        margin-right: 0em;
+        margin-left: 0em;
+        height: 60px;
+    }
+    header .title-container {
+        padding-right: 0em;
+        padding-left: 0em;
+        margin-right: 0em;
+        margin-left: 0em;
+    }
+    header .title-container .title{
+        font-size: 30px;
+    }
+    header .form {
+        margin-right: 0em;
+        margin-left: 0em;
+        padding-right: 0em;
+        padding-left: 0em;
+    }
+    header .form figure{
+        width:  30px;
+        height: 30px;
+        background-size: 30px 30px;
+    }
+}
