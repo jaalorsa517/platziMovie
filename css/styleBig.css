@@ -5,6 +5,25 @@ body {
     margin: 0;
 }
 
+.menu-user {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    background-image: url("../img/menor.svg");
+    background-color: rgba(12, 186, 30, .7);
+    border-radius: 50%;
+    display: none;
+    position: fixed;
+    z-index: 4;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.menu-user:hover {
+    background-color: rgba(12, 186, 30, .9);
+}
+
 header {
     background-color: #0cba1e;
     display: flex;
@@ -19,7 +38,7 @@ header .title-container {
     justify-content: space-evenly;
     align-items: center;
     padding-left: 0px;
-    margin: 2em 6em 2em 2em;
+    margin: 2em 4em 2em 2em;
 }
 
 header .title-container .logo img {
@@ -41,9 +60,9 @@ header .form {
     margin: 1em;
 }
 
-header .form form{
+header .form form {
     display: inline-flex;
-    width:100%
+    width: 100%
 }
 
 header .form input {
@@ -56,9 +75,14 @@ header .form input {
     width: 100%;
 }
 
-/* header .form figure {
-    visibility: hidden;
-} */
+header .form figure {
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    background-image: url("../img/find.svg");
+    background-repeat: no-repeat;
+}
 
 header .account {
     display: flex;
@@ -67,7 +91,7 @@ header .account {
     align-items: center;
     font-size: 1.3em;
     padding: 1em;
-    margin: 1em 0 1em 1em;
+    margin: 1em 0 1em 0em;
 }
 
 header .account .username {
@@ -102,10 +126,4 @@ header .account .button:hover {
     width: 15px;
     height: 15px;
     background-size: 15px 15px;
-}
-
-@media screen and (max-width: 1090px) {
-    header .title-container {
-        margin-right: 2em;
-    }
 }

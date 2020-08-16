@@ -1,32 +1,38 @@
 /*Screen  800px  */
-@media screen and (max-width:800px){
-    header .title-container{
+
+@media screen and (max-width:800px) {
+    .menu-user {
+        display: block;
+    }
+    header .title-container {
         padding-left: 0px;
-        margin-left:0px;
-        flex:3;
+        margin-left: 0px;
+        flex: 3;
     }
-    header .account{
-        padding-right: 0;
-        margin-right: 0;
-    }
-    header .form{
+    header .form {
         width: max-content;
-        flex:1;
+        flex: 1;
     }
-    header .form form{
-        display:none;
+    header .form form {
+        display: none;
     }
-    header .form figure{
-        display: inline-flex;
-        width:  50px;
-        height: 50px;
-        background-size: 50px 50px;
-        background-image: url("../img/find.svg");
-        background-repeat: no-repeat;
+    header .account {
+        display: block;
+        height: 75px;
+        position: fixed;
+        top: 30px;
+        right: -100vw;
+        z-index: 4;
+        background-color: rgba(12, 186, 30, .7);
+        transition: 0.5s;
+    }
+    .account.is-active {
+        right: 0;
     }
 }
-@media screen and (max-width:650px){
-    header .account{
-        display:none;
+
+@media screen and (max-width:650px) {
+    header .account {
+        display: none;
     }
 }
