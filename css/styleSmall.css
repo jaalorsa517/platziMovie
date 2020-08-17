@@ -7,14 +7,20 @@
     header .title-container {
         padding-left: 0px;
         margin-left: 0px;
-        flex: 3;
+        flex: 1;
+    }
+    header .title-container .title{
+        font-size:40px
     }
     header .form {
         width: max-content;
-        flex: 1;
+        flex: auto;
     }
     header .form form {
-        display: none;
+        flex:1;
+    }
+    header .form input{
+        height: 40px;
     }
     header .account {
         display: block;
@@ -31,8 +37,8 @@
     }
 }
 
-@media screen and (max-width:650px) {
+/* @media screen and (max-width:650px) {
     header .account {
         display: none;
     }
-}
+} */

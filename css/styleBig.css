@@ -43,6 +43,7 @@ header .title-container {
 
 header .title-container .logo img {
     height: 50px;
+    flex:1;
 }
 
 header .title-container .title {
@@ -51,6 +52,7 @@ header .title-container .title {
     font-weight: bold;
     color: rgba(0, 0, 0, .8);
     flex: 1;
+    margin:0px;
 }
 
 header .form {
