@@ -2,22 +2,25 @@
 
 @media screen and (max-width:1024px) {
     
-    header {
+    #principal {
         height: 80px;
     }
-    header .title-container {
+    #principal .title-container {
         margin-right: 0em;
     }
-    header .form {
+    #principal .form {
         margin-left: 10px;
     }
-    header .form form {
+    #principal .form form {
         width: 100%;
     }
-    header .account {
+    #principal .account {
         display: flexbox;
     }
     .button {
         display: none;
+    }
+    #secondary{
+        top:80px;
     }
 }

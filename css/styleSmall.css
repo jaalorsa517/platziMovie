@@ -1,28 +1,28 @@
 /*Screen  800px  */
 
 @media screen and (max-width:800px) {
-    .menu-user {
+    .menu-user-rigth {
         display: block;
     }
-    header .title-container {
+    #principal .title-container {
         padding-left: 0px;
         margin-left: 0px;
         flex: 1;
     }
-    header .title-container .title{
+    #principal .title-container .title{
         font-size:40px
     }
-    header .form {
+    #principal .form {
         width: max-content;
         flex: auto;
     }
-    header .form form {
+    #principal .form form {
         flex:1;
     }
-    header .form input{
+    #principal .form input{
         height: 40px;
     }
-    header .account {
+    #principal .account {
         display: block;
         height: 75px;
         position: fixed;
@@ -32,13 +32,7 @@
         background-color: rgba(12, 186, 30, .7);
         transition: 0.5s;
     }
-    .account.is-active {
+    #principal .account.is-active {
         right: 0;
     }
 }
-
-/* @media screen and (max-width:650px) {
-    header .account {
-        display: none;
-    }
-} */
