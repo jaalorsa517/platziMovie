@@ -1,10 +1,17 @@
-//Scripts encargado de la interactividad
-//Pantallas
+/***Scripts encargado de la interactividad**/
+
+//validacion menu-user
 const small = window.matchMedia('screen and (max-width:800px)');
-
-
 const menuUser = document.querySelector('.account');
 const buttonUser = document.querySelector("#menu-user-rigth");
+
+//validacion textFieldFind
+const miniSmall = window.matchMedia('screen and (min-width:200px) and (max-width:650px)');
+const findText = document.querySelector('#findText');
+const findIcon = document.querySelector('.find-icon');
+const title = document.querySelector('.title-container');
+const secondaryButton = document.querySelector('#menu-user-left');
+const menuSecond = document.querySelector('#secondary');
 
 function hideShow() {
     if (menuUser.classList.contains('is-active')) {
@@ -23,17 +30,6 @@ function validationMenuUser(event) {
         buttonUser.removeEventListener('click', hideShow);
     }
 }
-
-small.addListener(validationMenuUser);
-validationMenuUser(small);
-
-//validacion textFieldFind
-const miniSmall = window.matchMedia('screen and (min-width:200px) and (max-width:650px)');
-const findText = document.querySelector('#findText');
-const findIcon = document.querySelector('.find-icon');
-const title = document.querySelector('.title-container');
-const secondaryButton = document.querySelector('#menu-user-left');
-const menuSecond = document.querySelector('#secondary');
 
 function onTextFind() {
     if (findText.classList.contains('is-active')) {
@@ -63,6 +59,9 @@ function validationFind(event) {
         secondaryButton.removeEventListener('click', onMenuSecond)
     }
 }
+
+small.addListener(validationMenuUser);
+validationMenuUser(small);
 
 miniSmall.addListener(validationFind);
 validationFind(miniSmall);

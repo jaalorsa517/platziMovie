@@ -1,3 +1,7 @@
+:root{
+    --width-card:450px;
+    --heigth-card:300px;
+}
 /*Screen superiores 1280 x 720*/
 
 body {
@@ -5,7 +9,7 @@ body {
     margin: 0;
 }
 
-/*************** MENU USER **************/
+/******************** MENU USER ********************/
 
 .menu-user-rigth {
     width: 40px;
@@ -45,7 +49,7 @@ body {
     background-color: rgba(12, 186, 30, .9);
 }
 
-/*************** FIN MENU USER **************/
+/****************** FIN MENU USER ********************/
 
 /*************** INICIO HEADER PRINCIPAL **************/
 
@@ -55,7 +59,7 @@ body {
     justify-content: space-around;
     box-shadow: 0px 0px 10px 10px #b6b9b6;
     height: 100px;
-    width: 100vw;
+    width: 100%;
 }
 
 #principal .title-container {
@@ -160,81 +164,173 @@ body {
 /*************** INICIO HEADER SECONDARY **************/
 
 #secondary {
-    display: block;
-    position: fixed;
-    top: 100px;
-    left: 0;
+    display: flex;
+    flex-direction: column;
     z-index: 3;
-    height: 100vh;
+    height: 100%;
     width: 80px;
     background-color: #262b48;
 }
-
+.secondary{
+    grid-area: second;
+}
 #secondary .secondary-container {
-    display: block;
+    display: grid;
+    grid-template: 90% 10%/100%;
+    position:relative;
     font-size: 18px;
     width: 100%;
+    height:100%;
 }
 
 #secondary .secondary-container .navigator {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top:30px;
+}
+#secondary .secondary-container .navigator-items{
+    margin:15px 0;
+    width: 65%;
+    display:flex;
+    flex-direction: column;
 }
 
 #secondary .secondary-container .ajust {
     margin: 5px 5px 5px 15px;
-    position: absolute;
-    bottom: 100px;
+    position: relative;
     text-align: center;
-    width: 65%
+    width: 65%;
+    height:100%;
 }
 
-#secondary .secondary-container .home {
-    margin: 10px 0px;
-    width: 65%;
+#secondary .secondary-container .card-icon{
+    height: 40px;
+    width: 40px;
+    background-size: 40px 40px;
+    color:white;
+    cursor: pointer;
 }
 
 #secondary .secondary-container .icon-home {
-    height: 40px;
-    width: 40px;
-    background-size: 40px 40px;
     background-image: url("../img/home.png");
-    color: white;
-}
-
-#secondary .secondary-container .treding {
-    margin: 10px 0px;
-    width: 65%;
 }
 
 #secondary .secondary-container .icon-treding {
-    height: 40px;
-    width: 40px;
-    background-size: 40px 40px;
     background-image: url("../img/treding.png");
 }
 
-#secondary .secondary-container .likes {
-    margin: 10px 0px;
-    width: 65%;
-}
-
 #secondary .secondary-container .icon-likes {
-    height: 40px;
-    width: 40px;
-    background-size: 40px 40px;
     background-image: url("../img/like.png");
 }
 
 #secondary .secondary-container .icon-ajust {
-    height: 40px;
-    width: 40px;
-    background-size: 40px 40px;
     background-image: url("../img/config.png");
 }
 
 #secondary a {
     color: white;
     text-decoration: none;
+    cursor: pointer;
+    text-align: center;
 }
+
+/*************** FINAL HEADER SECONDARY **************/
+
+/*************** INICIO MAIN **************/
+
+.main-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 80px repeat(3,1fr);
+    grid-template-areas: 
+    "second title-ahora title-ahora title-ahora" 
+    "second card-ahora card-ahora card-ahora" 
+    "second title-no-debes title-no-debes title-no-debes"
+    "second card-no-debes card-no-debes card-no-debes" 
+    "second title-aclamadas title-aclamadas title-aclamadas" 
+    "second card-aclamadas card-aclamadas card-aclamadas";
+    row-gap: 20px;
+    column-gap:1%;
+}
+
+.ahora {
+    grid-area: title-ahora;
+}
+
+.card-ahora {
+    grid-area: card-ahora;
+}
+
+.no-debes {
+    grid-area: title-no-debes;
+}
+
+.card-no-debes {
+    grid-area: card-no-debes;
+}
+
+.aclamadas {
+    grid-area: title-aclamadas;
+}
+
+.card-aclamadas {
+    grid-area: card-aclamadas;
+}
+.title-child{
+    font-size:24px;
+    font-weight: bold;
+}
+
+.cards-child {
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(3,32%);
+    column-gap:1%;
+    justify-items: center;
+    align-content: center;
+    justify-self:center;
+}
+
+.card {
+    height: 250px;
+    width: 100%;
+    position:relative;
+}
+
+.img-card img {
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    z-index:0;
+}
+
+.description-card-container {
+    margin:0;
+    width: 100%;
+    height: 50%;
+    background: rgba(38, 43, 72, 0.7);
+    color: white;
+    position:absolute;
+    z-index: 1;
+    font-size:16px;
+    bottom:0;
+    overflow:auto;
+    scrollbar-width:none;
+}
+.description-card-container::-webkit-scrollbar {
+    display: none;
+}
+
+.title-card{
+    font-size:22px;
+    font-weight: bold;
+    text-align: center;
+    margin:0;
+}
+.description-card{
+    width: 100%;
+}
+
+/*************** FIN MAIN **************/
